@@ -2,6 +2,9 @@ from decorator import decorator
 import os
 
 
+__all__ = ['fork']
+
+
 def fork(n):
     """Decorator to fork a function many times.
 
