@@ -2,6 +2,9 @@ from decorator import decorator
 from time import time
 
 
+__all__ = ['bench']
+
+
 @decorator
 def bench(f, *args, **kwargs):
     """Decorator to time a function.

@@ -2,6 +2,9 @@ from decorator import decorator
 import os
 
 
+__all__ = ['fork']
+
+
 def fork(n):
     """Decorator to fork a function many times.
 
@@ -28,6 +31,13 @@ def fork(n):
     'done'
 
     """
+    # Check that we passed a correct value for n
+    if not isinstance(n, int):
+        raise TypeError('Argument of fork should be an integer, not %s.' % type(n))
+    else:
+        if not n > 0:
+            raise ValueError('Argument n of fork should be greater than 0, not %d.' % n)
+
     @decorator
     def wrapper(f, *args, **kwargs):
         # Actual function that will make the forks.
