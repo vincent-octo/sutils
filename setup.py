@@ -10,9 +10,11 @@ setup(
     # installed or upgraded on the target machine
     install_requires=['decorator'],
 
+    extras_require={'tests': ['pytest']},
+
     # metadata for upload to PyPI
-    author="Me",
-    author_email="me@example.com",
+    author="Vincent",
+    author_email="vincent-octo@users.noreply.github.com",
     description="Simple Python utilities.",
     license="MIT",
     keywords="utility utilities",
