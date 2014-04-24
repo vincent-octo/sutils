@@ -15,18 +15,18 @@ def bench(f, *args, **kwargs):
     :returns: real time to execute f and result of f
     :rtype: tuple
 
-    Example
-    -------
-    >>> from time import sleep
-    >>> @bench
-    ... def super_func(numbers):
-    ...     sleep(1)
-    ...     return numbers
-    >>> bench_time, func_res = super_func([3, 4, 5])
-    >>> 1. < bench_time < 1.1
-    True
-    >>> func_res
-    [3, 4, 5]
+    *Example*::
+
+        >>> from time import sleep
+        >>> @bench
+        ... def super_func(numbers):
+        ...     sleep(1)
+        ...     return numbers
+        >>> bench_time, func_res = super_func([3, 4, 5])
+        >>> 1. < bench_time < 1.1
+        True
+        >>> func_res
+        [3, 4, 5]
     """
     tstart = time()
     res_func = f(*args, **kwargs)

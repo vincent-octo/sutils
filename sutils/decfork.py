@@ -11,24 +11,24 @@ def fork(n):
     :param int n: number of forks to make.
     :returns: None
 
-    Example
-    -------
-    >>> from time import sleep
-    >>> @fork(n=3)
-    ... def my_func_to_fork():
-    ...     print('Starting...')
-    ...     sleep(1)
-    ...     print('done')
-    >>> my_func_to_fork()
+    *Example*
+
+        >>> from time import sleep
+        >>> @fork(n=3)
+        ... def my_func_to_fork():
+        ...     print('Starting...')
+        ...     sleep(1)
+        ...     print('done')
+        >>> my_func_to_fork()
 
     will output ::
 
-    'Starting...'
-    'Starting...'
-    'Starting...'
-    'done'
-    'done'
-    'done'
+        'Starting...'
+        'Starting...'
+        'Starting...'
+        'done'
+        'done'
+        'done'
 
     """
     # Check that we passed a correct value for n
